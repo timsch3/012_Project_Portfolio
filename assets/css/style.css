@@ -6,7 +6,12 @@ body {
     font-size: 10px;
 }
 
-/*--------------- Top section ---------------*/
+/*-------------------- Spacer */
+.spacer {
+    padding-top: 7%;
+}
+
+/*-------------------- Top section */
 section:first-of-type p {
     font-family: 'Work Sans', sans-serif;
     font-size: 2em;
@@ -15,7 +20,6 @@ section:first-of-type h2 {
     font-family: 'Didact Gothic', sans-serif;
     font-size: 10em;
     font-weight: normal;
-    line-height: 130px;
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: #000;
@@ -29,7 +33,7 @@ section:first-of-type h1 {
     text-transform: uppercase;
 }
 
-/*--------------- All work sections ---------------*/
+/*-------------------- All work sections */
 .work div {
     text-align: left;
     padding-left: 15%;
@@ -55,14 +59,18 @@ section:first-of-type h1 {
     font-size: 11.2em;
     font-weight: normal;
     text-transform: uppercase;
-    color: #fff;
-}
-.work div div { /* SPACER */
-    padding-top: 7%;
 }
 
-/*--------------- Link buttons & number highlight dark sections ---------------*/
+/*-------------------- All dark sections */
+.dark {
+    min-height: 100vh;
+}
+.dark h1 {
+    color: #fff;
+}
+/* Link buttons & number highlight */
 .dark a:link, .dark a:visited {
+    display: inline-block;
     font-family: 'Fjalla One', sans-serif;
     color: #fff;
     font-weight: normal;
@@ -94,8 +102,13 @@ section:first-of-type h1 {
     opacity: 1;
 }
 
-/*--------------- Link buttons & number highlight light sections ---------------*/
+/*-------------------- All light sections */
+.light h1 {
+    color: #000;
+}
+/* Link buttons & number highlight */
 .light a:link, .light a:visited {
+    display: inline-block;
     font-family: 'Fjalla One', sans-serif;
     color: #000;
     font-weight: normal;
@@ -127,32 +140,27 @@ section:first-of-type h1 {
     opacity: 1;
 }
 
-/*--------------- All dark sections ---------------*/
-.dark {
-    min-height: 100vh;
-}
-
-/*--------------- Orbis ---------------*/
+/*-------------------- Orbis */
 section:nth-of-type(2) {
     background: center/cover url(../img/portfolio2.jpg) no-repeat;
 }
 
-/*--------------- Rollr ---------------*/
+/*-------------------- Rollr */
 section:nth-of-type(3) {
     background: center/cover url(../img/portfolio3.png) no-repeat;
 }
 
-/*--------------- Galito's ---------------*/
+/*------------------- Galito's */
 section:nth-of-type(4) {
     background: center/cover url(../img/portfolio4.jpg) no-repeat;
 }
 
-/*--------------- Tretto ---------------*/
+/*-------------------- Tretto */
 section:nth-of-type(5) {
     background: center/cover url(../img/portfolio5.png) no-repeat;
 }
 
-/*--------------- What more? ---------------*/
+/*-------------------- What more? section */
 #info div {
     background: #000;
     color: #fff;
@@ -190,7 +198,7 @@ section:nth-of-type(5) {
     text-decoration: underline;
 }
 
-/*--------------- Links ---------------*/
+/*-------------------- Links section */
 
 #links {
     font-family: 'Didact Gothic', sans-serif;
@@ -210,17 +218,15 @@ section:nth-of-type(5) {
     text-decoration: underline;
 }
 
-/*--------------- Animated heart ---------------*/
+/*-------------------- Animated heart */
 @keyframes heartbeat {
-    0% {font-size: 0.1em;}
-    50% {font-size: 0.2em;}
-    100% {font-size: 0.1em;}
+    0% {transform: scale(.1);}
+    50% {transform: scale(.2);}
+    100% {transform: scale(.1);}
 }
 #links figure {
+    margin: 0;
     animation-name: heartbeat;
     animation-duration: 1.25s;
     animation-iteration-count: infinite;
-}
-#links div:last-of-type {
-    height: 150px;
 }
